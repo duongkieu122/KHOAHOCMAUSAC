@@ -20,3 +20,35 @@ with col1:
 
 with col2:
     st.image("logo-hcmute.jpg", width=140)
+    # CSS để làm ảnh avatar tròn
+    st.markdown("""
+        <style>
+        .avatar img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+        .avatar-name {
+            text-align: center;
+            font-size: 14px;
+            color: #444;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    # Hiển thị 2 ảnh thành viên theo chiều ngang
+    member_col1, member_col2 = st.columns(2)
+
+    with member_col1:
+        st.markdown("<div class='avatar'>", unsafe_allow_html=True)
+        st.image("KHDuong.jpg")
+        st.markdown("<div class='avatar-name'>Kiều Hồng Dương</div>", unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    with member_col2:
+        st.markdown("<div class='avatar'>", unsafe_allow_html=True)
+        st.image("TNHuynh.jpg")
+        st.markdown("<div class='avatar-name'>Tống Ngân Huỳnh</div>", unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
